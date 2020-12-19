@@ -1,0 +1,160 @@
+@charset 'UTF-8';
+
+/**
+ * Simple FlexGrid
+ * Version: 1.0.0
+ * Author: wallel
+ *
+ * Desktop: $descktop up
+ * Tablet: $tablet ~ $descktop
+ * Mobile: $tablet down
+ * Small: $mobile down (optional)
+ */
+
+$container-width: 1200px;
+$column-gap: 30px;
+
+$descktop: 1024px;
+$tablet: 768px;
+$mobile: 375px;
+
+.container {
+	display: flex;
+	flex-direction: column;
+	margin: {
+		left: auto;
+		right: auto;
+	}
+	padding: {
+		left: #{$column-gap / 2};
+		right: #{$column-gap / 2};
+	}
+	max-width: $container-width;
+	width: 100%;
+
+	&.reverse {
+		flex-direction: column-reverse;
+	}
+
+	&.row {
+		flex-direction: row;
+
+		&.reverse {
+			flex-direction: row-reverse;
+		}
+	}
+
+	&-fluid {
+		@extend .container;
+		max-width: inherit;
+	}
+}
+
+.row {
+	display: flex;
+	flex-direction: column;
+	margin-left: -#{$column-gap / 2};
+	margin-right: -#{$column-gap / 2};
+
+	&.reverse {
+		flex-direction: column-reverse;
+	}
+
+	&.row {
+		flex-direction: row;
+
+		&.reverse {
+			flex-direction: row-reverse;
+		}
+	}
+
+	&-hidden {
+		display: none;
+	}
+}
+
+$columns: (
+	'1': 8.333333%,
+	'2': 16.666666%,
+	'3': 25%,
+	'4': 33.333333%,
+	'5': 41.666666%,
+	'6': 50%,
+	'7': 58.333333%,
+	'8': 66.666666%,
+	'9': 75%,
+	'10': 83.333333%,
+	'11': 91.666666%,
+	'12': 100%,
+);
+
+@each $key, $value in $columns {
+	.col-#{$key}, .col-offset-#{$key},
+	.col-tb-#{$key}, .col-tb-offset-#{$key},
+	.col-mo-#{$key}, .col-mo-offset-#{$key},
+	.col-sm-#{$key}, .col-sm-offset-#{$key} {
+		flex: 1 1 0px;
+		padding-left: #{$column-gap / 2};
+		padding-right: #{$column-gap / 2};
+		min-height: 1px;
+	}
+
+	.col-#{$key} { width: #{$value}; }
+	.col-offset-#{$key} { margin-left: #{$value}; }
+}
+.col-hidden {
+	display: none;
+}
+
+
+/**
+ * Table
+ */
+@media all and (max-width: #{$descktop - 1}) {
+	@each $key, $value in $columns {
+		.col-#{$key} { width: 100%; }
+		.col-offset-#{$key} { margin-left: 0; }
+
+		.col-tb-#{$key} { width: #{$value}; }
+		.col-tb-offset-#{$key} { margin-left: #{$value}; }
+	}
+	.col-tb-hidden { display: none; }
+}
+
+
+/**
+ * Moblie
+ */
+@media all and (max-width: #{$tablet - 1}) {
+	@each $key, $value in $columns {
+		.col-tb-#{$key} { width: 100%; }
+		.col-tb-offset-#{$key} { margin-left: 0; }
+
+		.col-mo-#{$key} { width: #{$value}; }
+		.col-mo-offset-#{$key} { margin-left: #{$value}; }
+	}
+	.col-mo-hidden { display: none; }
+}
+
+
+/**
+ * Small
+ */
+@media all and (max-width: #{$mobile - 1}) {
+	@each $key, $value in $columns {
+		.col-mo-#{$key} { width: 100%; }
+		.col-mo-offset-#{$key} { margin-left: 0; }
+
+		.col-sm-#{$key} { width: #{$value}; }
+		.col-sm-offset-#{$key} { margin-left: #{$value}; }
+	}
+	.col-sm-hidden { display: none; }
+}
+
+
+/**
+ * Hide to Small Device
+ */
+@media all and (max-width: 319px) {
+	html, body { display: none; }
+}
