@@ -1,6 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"
-%><!DOCTYPE html>
+%>
+<%
+	// 모듈별 페이지 고유 body id 지정
+	String mod = null;
+	if (request.getParameter("mod") == null) {
+		mod = "id=\"body-mod-main\"";
+	} else {
+		mod = "id=\"body-mod-"+request.getParameter("mod")+"\"";
+	}
+%>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
@@ -20,7 +30,7 @@
 	<link rel="stylesheet" href="./assets/css/core.min.css">
 </head>
 
-<body id="body-">
+<body <%=mod%>>
 	<div id="wrap">
 		<header id="header">
 			<div class="container">
@@ -28,8 +38,8 @@
 					<div class="col-12">
 						<div class="system-navigation">
 							<ul>
-								<li><a href="#">LOGIN</a></li>
-								<li><a href="#">SIGN UP</a></li>
+								<li><a href="/?mod=member&p=login">LOGIN</a></li>
+								<li><a href="/?mod=member&p=signup">SIGN UP</a></li>
 							</ul>
 						</div>
 					</div>
@@ -41,8 +51,8 @@
 
 						<nav class="navigation">
 							<ul class="test">
-								<li><a href="#">DAILY</a></li>
-								<li><a href="#">1RM</a></li>
+								<li><a href="/?mod=record&p=daily">DAILY</a></li>
+								<li><a href="/?mod=record&p=1rm">1RM</a></li>
 							</ul>
 						</nav>
 					</div>
