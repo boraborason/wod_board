@@ -14,15 +14,25 @@
 	if ( request.getParameter("m") == null ) {
 		m = "main";
 	} else{
-		m = request.getParameter("s");
+		m = request.getParameter("m");
 	}
 
 	// 모듈별 기본 값 설정
 	switch(m) {
-		case "member": m = "member"; pageName = "member"; break;
-		case "record": m = "record"; pageName = "record"; break;
+		case "member":
+			m = "member";
+			pageName = "member";
+			break;
 
-		default: m = "main"; pageName = "main"; break;
+		case "record":
+			m = "record";
+			pageName = "record";
+			break;
+
+		default:
+			m = "main";
+			pageName = "main";
+			break;
 	}
 
 	// 모듈 경로 설정
