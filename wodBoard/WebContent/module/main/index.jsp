@@ -56,7 +56,7 @@
 					<div class="col-12">
 
 						<header class="header">
-							<h2 class="title"></h2>
+							<h2 class="title">메인 헤더 수정 테스트</h2>
 						</header>
 
 						<div class="buttons">
