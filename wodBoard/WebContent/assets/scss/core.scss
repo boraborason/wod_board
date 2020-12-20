@@ -13,8 +13,21 @@
 /**
  * Core
  */
-
 body {
 	font-family: 'Noto Sans KR', sans-serif;
 	font-size: 13px;
+}
+
+/**
+ * Member
+ */
+#body-mod-member {
+	.login-form {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		background-color: #f1f1f1;
+	}
 }

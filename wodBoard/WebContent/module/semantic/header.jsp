@@ -38,8 +38,8 @@
 					<div class="col-12">
 						<div class="system-navigation">
 							<ul>
-								<li><a href="/?mod=member&p=login">LOGIN</a></li>
-								<li><a href="/?mod=member&p=signup">SIGN UP</a></li>
+								<li><a href="/wodBoard/?mod=member&p=login">LOGIN</a></li>
+								<li><a href="/wodBoard/?mod=member&p=signup">SIGN UP</a></li>
 							</ul>
 						</div>
 					</div>
@@ -51,8 +51,8 @@
 
 						<nav class="navigation">
 							<ul class="test">
-								<li><a href="/?mod=record&p=daily">DAILY</a></li>
-								<li><a href="/?mod=record&p=1rm">1RM</a></li>
+								<li><a href="/wodBoard/?mod=record&p=daily">DAILY</a></li>
+								<li><a href="/wodBoard/?mod=record&p=1rm">1RM</a></li>
 							</ul>
 						</nav>
 					</div>
