@@ -40,7 +40,7 @@
 						<h1 class="title">WOD BOARD</h1>
 
 						<nav class="navigation">
-							<ul clas>
+							<ul class="test">
 								<li><a href="#">DAILY</a></li>
 								<li><a href="#">1RM</a></li>
 							</ul>
