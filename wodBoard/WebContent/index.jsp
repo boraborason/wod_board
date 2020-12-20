@@ -1,25 +1,36 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"
+	pageEncoding="UTF-8"
 %>
 <%
-	// 모듈별 경로 설정
-	String s = null;
-	
-	// service 파라미터가 비어있다면 main 모듈을 기본 참조
-	if ( request.getParameter("s") == null ) {
-		s = "main";
+	/**
+	 * m = module
+	 */
+
+	// 모듈별 고유값 설정
+	String m = null;
+	String pageName = null;
+
+	// m 파라미터가 비어있다면 main 모듈을 기본 참조
+	if ( request.getParameter("m") == null ) {
+		m = "main";
 	} else{
-		s = request.getParameter("s");
+		m = request.getParameter("s");
 	}
-	
-	// s 파라미터별 관련 모듈 호출
-	switch(s) {
-		case "member": s = "member"; break;
-		case "record": s = "record"; break;
+
+	// 모듈별 기본 값 설정
+	switch(m) {
+		case "member": m = "member"; pageName = "member"; break;
+		case "record": m = "record"; pageName = "record"; break;
+
+		default: m = "main"; pageName = "main"; break;
 	}
-	
+
 	// 모듈 경로 설정
 	// 모듈별 기본 index.jsp 파일을 경로로 바라본다.
-	String module_path = "module/" + s + "/index.jsp";
+	String module_path = "/module/" + m + "/index.jsp";
+
+	// Sematic 파일 경로
+	String header_path = "module/semantic/header.jsp";
+	String footer_path = "module/semantic/footer.jsp";
 %>
 <jsp:include page="<%=module_path%>" />
