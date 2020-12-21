@@ -1,21 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"
 %>
+<%
+	String p = null;
 
-<main id="main">
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
+	if ( request.getParameter("p") == null ) {
+		p = "main";
+	} else {
+		p = request.getParameter("p");
+	}
 
-				<header class="header">
-					<h2 class="title">메인 헤더 수정 테스트3</h2>
-				</header>
-
-				<div class="buttons">
-					<a href="#"></a>
-				</div>
-
-			</div>
-		</div>
-	</div>
-</main>
+	String page_path = p + ".jsp";
+%>
+<jsp:include page="<%=page_path%>" />

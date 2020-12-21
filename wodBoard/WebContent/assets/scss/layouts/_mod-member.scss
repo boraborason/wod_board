@@ -1,0 +1,92 @@
+/**
+ * Member
+ */
+ #body-mod-member {
+	background-color: #f1f1f1;
+}
+
+#login-container {
+	&-content {
+		padding: 100px 0;
+	}
+
+	.login-form {
+		display: flex;
+		justify-content: center;
+
+		form {
+			width: 500px;
+		}
+
+		.form-row {
+			&:not(:first-child) {
+				margin-top: 20px;
+			}
+
+			input {
+				padding: 0 10px;
+				width: 100%;
+				height: 40px;
+
+				@include placeholder() {
+					color: #aaa;
+				}
+			}
+		}
+
+		.other-row {
+			display: flex;
+			justify-content: flex-end;
+
+			a {
+				display: block;
+				margin-left: 10px;
+				font-size: 13px;
+				color: #333;
+			}
+		}
+	}
+}
+
+#signup-container {
+	&-content {
+		padding: 100px 0;
+	}
+
+	.signup-form {
+		display: flex;
+		justify-content: center;
+
+		form {
+			width: 500px;
+		}
+
+		.form-row {
+			&:not(:first-child) {
+				margin-top: 20px;
+			}
+
+			input {
+				padding: 0 10px;
+				width: 100%;
+				height: 40px;
+
+				@include placeholder() {
+					color: #aaa;
+				}
+			}
+		}
+
+		.other-row {
+			display: flex;
+			justify-content: flex-end;
+
+			a {
+				display: block;
+				margin-left: 10px;
+				font-size: 13px;
+				color: #333;
+			}
+		}
+	}
+}
