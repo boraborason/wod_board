@@ -23,11 +23,11 @@
 	}
 }
 
-@mixin fullscreen($z-index: 1) {
-	position: absolute;
+@mixin fullscreen($p: 'absolute', $z: 1) {
+	position: #{$p};
 	top: 0;
 	left: 0;
-	z-index: $z-index;
+	z-index: #{$z};
 	width: 100%;
 	height: 100%;
 }

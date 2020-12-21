@@ -41,6 +41,7 @@
 	
 							<nav class="navigation">
 								<ul>
+									<li><a href="https://www.crossfit.com/what-is-crossfit/" target="_blank" rel="noopener nofollow">CROSSFIT?</a></li>
 									<li><a href="/wodBoard/?mod=record&p=daily">DAILY</a></li>
 									<li><a href="/wodBoard/?mod=record&p=1rm">1RM</a></li>
 								</ul>
