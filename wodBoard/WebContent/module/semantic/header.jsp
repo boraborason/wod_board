@@ -49,8 +49,8 @@
 							
 							<div class="system-navigation">
 								<ul>
-									<li><a href="/wodBoard/?mod=member&p=login">LOGIN</a></li>
-									<li><a href="/wodBoard/?mod=member&p=signup">SIGN UP</a></li>
+									<li><a class="login" href="/wodBoard/?mod=member&p=login">LOGIN</a></li>
+									<li><a class="signup" href="/wodBoard/?mod=member&p=signup">SIGN UP</a></li>
 								</ul>
 							</div>
 						</div>
