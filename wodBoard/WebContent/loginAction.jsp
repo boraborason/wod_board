@@ -14,8 +14,8 @@
 </head>
 <body>
 <%
-UserDAO userDAO = new UserDAO();
-int result = userDAO.login(user.getUserID(), user.getUserPW());//사용자가 입력한 값을 get하여 매게변수로
+		UserDAO userDAO = new UserDAO();
+		int result = userDAO.login(user.getUserID(), user.getUserPW());//사용자가 입력한 값을 get하여 매게변수로
 %>
 </body>
 </html>
