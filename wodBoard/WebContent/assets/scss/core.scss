@@ -16,9 +16,12 @@
 @import './layouts/grid';
 @import './layouts/header';
 
-// module
-@import './layouts/mod-main';
-@import './layouts/mod-member';
+
+/**
+ * Modules
+ */
+@import './modules/main';
+@import './modules/member';
 
 
 /**
